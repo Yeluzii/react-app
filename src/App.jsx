@@ -1,13 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [count, setCount] = useState(0);
 
   return (
-    <>
+    <div className="app-container">
+      <nav className="navbar">
+        <h1 className="brand">React Home</h1>
+        <div className="nav-links">
+          <a href="#home">首页</a>
+          <a href="#about">关于</a>
+        </div>
+      </nav>
+
+      <div className="hero">
+        <h1>欢迎来到我的空间</h1>
+        <p>探索React的无限可能</p>
+      </div>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -28,8 +40,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;
